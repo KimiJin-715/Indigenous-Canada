@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indigenous Canada: Health, Culture & Reconciliation</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'indigenous-red': '#c7493a',
+                        'indigenous-green': '#7c9473',
+                        'indigenous-tan': '#d4a574',
+                        'indigenous-earth': '#8b6f47',
+                    },
+                    fontFamily: {
+                        'display': ['Georgia', 'serif'],
+                        'body': ['-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .font-display {
+            font-family: 'Crimson Pro', Georgia, serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-display font-bold text-indigenous-red">Indigenous Canada</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-indigenous-red transition px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#health" class="text-gray-700 hover:text-indigenous-red transition px-3 py-2 text-sm font-medium">Health</a>
+                    <a href="#culture" class="text-gray-700 hover:text-indigenous-red transition px-3 py-2 text-sm font-medium">Culture</a>
+                    <a href="#reconciliation" class="text-gray-700 hover:text-indigenous-red transition px-3 py-2 text-sm font-medium">Reconciliation</a>
+                    <a href="#statistics" class="text-gray-700 hover:text-indigenous-red transition px-3 py-2 text-sm font-medium">Statistics</a>
+                    <a href="#resources" class="text-gray-700 hover:text-indigenous-red transition px-3 py-2 text-sm font-medium">Resources</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-indigenous-red focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-indigenous-red rounded-md">Home</a>
+                <a href="#health" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-indigenous-red rounded-md">Health</a>
+                <a href="#culture" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-indigenous-red rounded-md">Culture</a>
+                <a href="#reconciliation" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-indigenous-red rounded-md">Reconciliation</a>
+                <a href="#statistics" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-indigenous-red rounded-md">Statistics</a>
+                <a href="#resources" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-indigenous-red rounded-md">Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
+                    Indigenous Peoples of Canada
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                    Understanding Health, Culture, History, and the Path to Reconciliation
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                        <div class="text-4xl md:text-5xl font-bold text-indigenous-tan mb-2">4.5%</div>
+                        <div class="text-gray-300 text-sm md:text-base">of Canada's Population</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                        <div class="text-4xl md:text-5xl font-bold text-indigenous-tan mb-2">~60</div>
+                        <div class="text-gray-300 text-sm md:text-base">Indigenous Languages</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                        <div class="text-4xl md:text-5xl font-bold text-indigenous-tan mb-2">94</div>
+                        <div class="text-gray-300 text-sm md:text-base">Calls to Action</div>
+                    </div>
+                </div>
+                
+                <a href="#health" class="inline-block bg-indigenous-red hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-lg transition shadow-lg hover:shadow-xl">
+                    Explore the Journey
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="text-center pb-8 animate-bounce">
+            <svg class="w-6 h-6 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Health Section -->
+    <section id="health" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="inline-block bg-indigenous-red/10 text-indigenous-red text-sm font-semibold px-4 py-2 rounded-full mb-4">HEALTH & WELLNESS</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-gray-900 mb-4">Indigenous Health in Canada</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Understanding the current state and challenges facing First Nations, Inuit, and Métis peoples</p>
+            </div>
+
+            <!-- Health Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Primary Healthcare Access -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="text-4xl mb-4">🏥</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Primary Healthcare Access</h3>
+                        
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Métis</span>
+                                    <span class="text-sm font-bold text-indigenous-red">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigenous-red h-2.5 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-sm font-medium text-gray-700">First Nations</span>
+                                    <span class="text-sm font-bold text-indigenous-red">66%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigenous-red h-2.5 rounded-full" style="width: 66%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Inuit</span>
+                                    <span class="text-sm font-bold text-indigenous-red">52%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigenous-red h-2.5 rounded-full" style="width: 52%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-sm text-gray-500 border-t pt-4">Percentage who consulted a healthcare provider for non-urgent needs in 2024</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Life Expectancy Gap -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Life Expectancy Gap</h3>
+                        
+                        <div class="space-y-4 mb-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium text-gray-700">Non-Indigenous</span>
+                                <span class="text-2xl font-bold text-indigenous-green">85.0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium text-gray-700">Métis</span>
+                                <span class="text-2xl font-bold text-gray-700">80.5</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium text-gray-700">First Nations</span>
+                                <span class="text-2xl font-bold text-gray-700">74.0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium text-gray-700">Inuit</span>
+                                <span class="text-2xl font-bold text-gray-700">71.9</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-sm text-gray-500 border-t pt-4">Life expectancy in years (2016-2021 data)</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Chronic Health Conditions -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="text-4xl mb-4">💊</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Chronic Health Conditions</h3>
+                        
+                        <div class="flex items-center justify-center my-8">
+                            <div class="text-center">
+                                <div class="text-6xl font-bold text-indigenous-red mb-2">~50%</div>
+                                <p class="text-sm text-gray-600">Indigenous Adults</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-amber-50 border-l-4 border-amber-400 p-4 rounded">
+                            <p class="text-sm text-gray-700">
+                                <span class="font-semibold">vs. 40.6%</span> of non-Indigenous adults with at least one chronic condition
+                            </p>
+                        </div>
+                        
+                        <p class="text-sm text-gray-500 border-t pt-4 mt-4">Based on 2019-2022 health surveys</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Healthcare Discrimination -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="text-4xl mb-4">⚠️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Healthcare Discrimination</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-red-50 rounded-lg p-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium text-gray-700">First Nations</span>
+                                    <span class="text-2xl font-bold text-red-600">24%</span>
+                                </div>
+                            </div>
+                            <div class="bg-red-50 rounded-lg p-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium text-gray-700">Inuit</span>
+                                    <span class="text-2xl font-bold text-red-600">23%</span>
+                                </div>
+                            </div>
+                            <div class="bg-red-50 rounded-lg p-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium text-gray-700">Métis</span>
+                                    <span class="text-2xl font-bold text-red-600">18%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-sm text-gray-500 border-t pt-4 mt-4">Experienced unfair treatment or discrimination from healthcare professionals in 2024</p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Travel for Healthcare -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="text-4xl mb-4">✈️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Travel for Healthcare</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
+                                <span class="font-medium text-gray-700">Inuit</span>
+                                <span class="text-3xl font-bold text-blue-600">40%</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
+                                <span class="font-medium text-gray-700">First Nations</span>
+                                <span class="text-3xl font-bold text-blue-600">18%</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
+                                <span class="font-medium text-gray-700">Métis</span>
+                                <span class="text-3xl font-bold text-blue-600">16%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-orange-50 border-l-4 border-orange-400 p-4 rounded mt-4">
+                            <p class="text-sm font-semibold text-gray-700">Critical: Over half of Inuit who travelled had to go more than 1,500 km for services</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Traditional Medicine -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="text-4xl mb-4">🌿</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Traditional Medicine Importance</h3>
+                        
+                        <div class="grid grid-cols-3 gap-4 mb-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigenous-green mb-1">86%</div>
+                                <p class="text-xs text-gray-600">First Nations</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigenous-green mb-1">82%</div>
+                                <p class="text-xs text-gray-600">Inuit</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigenous-green mb-1">70%</div>
+                                <p class="text-xs text-gray-600">Métis</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-sm text-gray-500 border-t pt-4">Consider traditional medicines and healing practices very or somewhat important (2024)</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture & Languages Section -->
+    <section id="culture" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="inline-block bg-indigenous-green/10 text-indigenous-green text-sm font-semibold px-4 py-2 rounded-full mb-4">CULTURE & IDENTITY</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-gray-900 mb-4">Indigenous Languages & Cultural Heritage</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">The living expression of connection to ancestors, land, and way of life</p>
+            </div>
+
+            <!-- Language Overview -->
+            <div class="bg-gradient-to-br from-indigenous-green to-indigenous-earth text-white rounded-2xl p-8 md:p-12 mb-12 shadow-xl">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8">The Linguistic Landscape</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl font-bold mb-2">~60</div>
+                        <p class="text-lg text-gray-100">Indigenous languages in 12 distinct language families</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl font-bold mb-2">3</div>
+                        <p class="text-lg text-gray-100">Languages account for 2/3 of all mother-tongue speakers</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">⚠️</div>
+                        <p class="text-lg text-gray-100">Most languages have few fluent speakers and are not spoken by children</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Initiatives -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                
+                <!-- Initiative 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-indigenous-green hover:shadow-2xl transition">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Indigenous Languages Act (2019)</h4>
+                    <p class="text-gray-600 mb-4">Received Royal Assent on June 21, 2019, establishing measures for recognition, preservation, and promotion of Indigenous languages across Canada.</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-indigenous-green mr-2">✓</span>
+                            <span>Created Office of the Commissioner of Indigenous Languages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigenous-green mr-2">✓</span>
+                            <span>Provides sustainable, long-term funding</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigenous-green mr-2">✓</span>
+                            <span>Addresses TRC Calls to Action 13, 14, and 15</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigenous-green mr-2">✓</span>
+                            <span>Requires parliamentary reviews every 3 years</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Initiative 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-indigenous-green hover:shadow-2xl transition">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">UN Decade of Indigenous Languages (2022-2032)</h4>
+                    <p class="text-gray-600 mb-4">Canada participates in the Global Task Force, demonstrating commitment to language preservation domestically and internationally.</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-indigenous-green mr-2">✓</span>
+                            <span>National action plans for revitalization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigenous-green mr-2">✓</span>
+                            <span>Budget 2024: $225M over 5 years</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigenous-green mr-2">✓</span>
+                            <span>$45M per year ongoing funding</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Initiative 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-indigenous-green hover:shadow-2xl transition">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Distinctions-Based Funding</h4>
+                    <p class="text-gray-600 mb-4">New funding models developed by First Nations, Inuit, and Métis partners to provide long-term agreements and greater Indigenous control.</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-indigenous-green mr-2">✓</span>
+                            <span>First Nations Regionally Designated Organizations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigenous-green mr-2">✓</span>
+                            <span>Inuit-specific approaches through Makivvik</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigenous-green mr-2">✓</span>
+                            <span>Métis Nation Saskatchewan 5-year work plan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FirstVoices Platform Highlight -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="bg-indigenous-tan text-white p-8 md:p-12">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">FirstVoices Platform</h3>
+                    <p class="text-lg text-gray-100 mb-8">In February 2024, the First Peoples' Cultural Council (FPCC) celebrated 20 years of FirstVoices.com with a new version of its free, open-source Indigenous language platform.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
+                            <div class="text-4xl font-bold mb-2">85+</div>
+                            <p class="text-sm">Languages Featured</p>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
+                            <div class="text-4xl font-bold mb-2">100%</div>
+                            <p class="text-sm">Community-Owned</p>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
+                            <div class="text-4xl font-bold mb-2">Global</div>
+                            <p class="text-sm">Now Expanding Worldwide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reconciliation Section -->
+    <section id="reconciliation" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="inline-block bg-indigenous-red/10 text-indigenous-red text-sm font-semibold px-4 py-2 rounded-full mb-4">TRUTH & RECONCILIATION</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-gray-900 mb-4">The Path to Reconciliation</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Addressing the legacy of residential schools and building a better future together</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="max-w-4xl mx-auto mb-16">
+                <div class="space-y-8">
+                    
+                    <!-- Timeline Item -->
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 rounded-full bg-indigenous-red"></div>
+                            <div class="w-0.5 h-full bg-indigenous-red/30"></div>
+                        </div>
+                        <div class="pb-8 flex-1">
+                            <span class="inline-block bg-indigenous-red text-white text-sm font-bold px-3 py-1 rounded mb-2">2008</span>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Truth and Reconciliation Commission Established</h4>
+                            <p class="text-gray-600">Created through the Indian Residential Schools Settlement Agreement with $72 million in federal support to document the history and harms of residential schools.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item -->
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 rounded-full bg-indigenous-red"></div>
+                            <div class="w-0.5 h-full bg-indigenous-red/30"></div>
+                        </div>
+                        <div class="pb-8 flex-1">
+                            <span class="inline-block bg-indigenous-red text-white text-sm font-bold px-3 py-1 rounded mb-2">2008-2015</span>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Commission Gathers Testimonies</h4>
+                            <p class="text-gray-600">Over 6 years, the TRC gathered testimonies from 6,500 Survivors and witnesses, hosted 7 national events, and reviewed over 5 million federal records.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item -->
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 rounded-full bg-indigenous-red"></div>
+                            <div class="w-0.5 h-full bg-indigenous-red/30"></div>
+                        </div>
+                        <div class="pb-8 flex-1">
+                            <span class="inline-block bg-indigenous-red text-white text-sm font-bold px-3 py-1 rounded mb-2">2015</span>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">94 Calls to Action Released</h4>
+                            <p class="text-gray-600">The Final Report and 94 Calls to Action were released, providing Canada's roadmap for reconciliation across all sectors of society.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item -->
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 rounded-full bg-indigenous-red"></div>
+                            <div class="w-0.5 h-full bg-indigenous-red/30"></div>
+                        </div>
+                        <div class="pb-8 flex-1">
+                            <span class="inline-block bg-indigenous-red text-white text-sm font-bold px-3 py-1 rounded mb-2">2019</span>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Indigenous Languages Act</h4>
+                            <p class="text-gray-600">Royal Assent received, addressing Calls to Action 13-15 and establishing framework for language preservation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item -->
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 rounded-full bg-indigenous-red"></div>
+                            <div class="w-0.5 h-full bg-indigenous-red/30"></div>
+                        </div>
+                        <div class="pb-8 flex-1">
+                            <span class="inline-block bg-indigenous-red text-white text-sm font-bold px-3 py-1 rounded mb-2">2021</span>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">National Day for Truth and Reconciliation</h4>
+                            <p class="text-gray-600">Established as federal statutory holiday on September 30 to honor residential school Survivors and remember the children who never came home.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item -->
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 h-4 rounded-full bg-indigenous-green"></div>
+                        </div>
+                        <div class="flex-1">
+                            <span class="inline-block bg-indigenous-green text-white text-sm font-bold px-3 py-1 rounded mb-2">2025</span>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Progress Continues</h4>
+                            <p class="text-gray-600">More than 85% of the 76 federal Calls to Action are completed or well underway. Reconciliation remains an ongoing journey requiring sustained effort.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 94 Calls to Action -->
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-12 mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">94 Calls to Action: Categories</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <!-- Legacy Section -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-indigenous-red text-white text-sm font-bold px-3 py-1 rounded">1-42</span>
+                            <h4 class="text-xl font-bold text-gray-900">Legacy</h4>
+                        </div>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>Child Welfare (1-5)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>Education (6-12)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>Language & Culture (13-17)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>Health (18-24)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>Justice (25-42)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Reconciliation Section -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-indigenous-red text-white text-sm font-bold px-3 py-1 rounded">43-94</span>
+                            <h4 class="text-xl font-bold text-gray-900">Reconciliation</h4>
+                        </div>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>UN Declaration (43-44)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>Royal Proclamation (45-47)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>Equity for Indigenous Peoples (50-59)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>Education & Commemoration (60-65)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>Museums & Archives (67-70)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>Missing Children (71-76)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigenous-red mr-2">•</span>
+                                <span>Media & Journalism (84-86)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Completed Actions -->
+                <div class="bg-green-50 border border-green-200 rounded-xl p-6">
+                    <h4 class="text-lg font-bold text-green-900 mb-4">Notable Completed Actions (as of 2025)</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                        <div class="bg-white rounded-lg p-3 border-l-4 border-green-500">
+                            <span class="text-sm font-medium text-gray-700">✓ Call 13-14: Indigenous Languages Act</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-3 border-l-4 border-green-500">
+                            <span class="text-sm font-medium text-gray-700">✓ Call 41: MMIWG Inquiry</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-3 border-l-4 border-green-500">
+                            <span class="text-sm font-medium text-gray-700">✓ Call 48: UN Declaration</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-3 border-l-4 border-green-500">
+                            <span class="text-sm font-medium text-gray-700">✓ Call 72: National Centre for TRC</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-3 border-l-4 border-green-500">
+                            <span class="text-sm font-medium text-gray-700">✓ Call 76: Missing Children Fund</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-3 border-l-4 border-green-500">
+                            <span class="text-sm font-medium text-gray-700">✓ Call 80: National Day Sept 30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Residential Schools Impact -->
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-2xl p-8 md:p-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-center mb-8">The Residential Schools System</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-indigenous-tan mb-2">~150,000</div>
+                        <p class="text-gray-300">Children separated from families</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-indigenous-tan mb-2">139</div>
+                        <p class="text-gray-300">Residential schools across Canada</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-indigenous-tan mb-2">100+</div>
+                        <p class="text-gray-300">Years of operation</p>
+                    </div>
+                </div>
+                
+                <p class="text-lg text-gray-300 text-center max-w-4xl mx-auto leading-relaxed">
+                    These government-funded, church-run institutions forcibly removed First Nations, Métis, and Inuit children from their families and subjected them to abuse, neglect, and cultural genocide in the name of assimilation. The system's legacy continues to impact Indigenous communities today through intergenerational trauma.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <span class="inline-block bg-indigenous-tan/10 text-indigenous-earth text-sm font-semibold px-4 py-2 rounded-full mb-4">DATA & INSIGHTS</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-gray-900 mb-4">Key Statistics at a Glance</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Interactive exploration of current Indigenous health and social indicators</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn px-6 py-2 rounded-full font-medium transition bg-indigenous-red text-white" data-filter="all">All Statistics</button>
+                <button class="filter-btn px-6 py-2 rounded-full font-medium transition bg-white text-gray-700 hover:bg-gray-100" data-filter="health">Health</button>
+                <button class="filter-btn px-6 py-2 rounded-full font-medium transition bg-white text-gray-700 hover:bg-gray-100" data-filter="education">Education</button>
+                <button class="filter-btn px-6 py-2 rounded-full font-medium transition bg-white text-gray-700 hover:bg-gray-100" data-filter="demographics">Demographics</button>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Stat Card 1 -->
+                <div class="stat-card bg-white rounded-xl shadow-lg p-6" data-category="health">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">Regular Healthcare Provider Access</h4>
+                    <p class="text-xs text-gray-500 mb-4">Source: Statistics Canada, 2024</p>
+                    
+                    <div class="space-y-4 mb-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Inuit</span>
+                                <span class="text-sm font-bold text-indigenous-red">54.3%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigenous-red h-2 rounded-full transition-all duration-1000" style="width: 54.3%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Non-Indigenous</span>
+                                <span class="text-sm font-bold text-indigenous-green">85.7%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigenous-green h-2 rounded-full transition-all duration-1000" style="width: 85.7%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-gray-600 bg-gray-50 p-3 rounded">Inuit adults are significantly less likely to have a regular healthcare provider than non-Indigenous adults.</p>
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="stat-card bg-white rounded-xl shadow-lg p-6" data-category="demographics">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">Indigenous Physicians</h4>
+                    <p class="text-xs text-gray-500 mb-4">Source: CMA, 2024</p>
+                    
+                    <div class="flex justify-around items-center my-6">
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-indigenous-red mb-1">3%</div>
+                            <p class="text-sm text-gray-600">of physicians</p>
+                        </div>
+                        <div class="text-4xl text-gray-300">vs</div>
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-gray-700 mb-1">4.5%</div>
+                            <p class="text-sm text-gray-600">of population</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-gray-600 bg-gray-50 p-3 rounded">Indigenous peoples are underrepresented in the medical profession.</p>
+                </div>
+
+                <!-- Stat Card 3 -->
+                <div class="stat-card bg-white rounded-xl shadow-lg p-6" data-category="health">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">Unmet Healthcare Needs</h4>
+                    <p class="text-xs text-gray-500 mb-4">Source: Statistics Canada, 2024</p>
+                    
+                    <div class="text-center my-6">
+                        <div class="text-6xl font-bold text-indigenous-red mb-3">25%+</div>
+                        <p class="text-lg font-medium text-gray-700 mb-2">reported unmet healthcare needs</p>
+                        <div class="inline-block bg-orange-100 border-l-4 border-orange-500 p-3 rounded text-left">
+                            <p class="text-sm text-gray-700"><span class="font-semibold">38.6%</span> among First Nations women</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stat Card 4 -->
+                <div class="stat-card bg-white rounded-xl shadow-lg p-6" data-category="health">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">Wait Time Satisfaction</h4>
+                    <p class="text-xs text-gray-500 mb-4">Source: Statistics Canada, 2024</p>
+                    
+                    <div class="space-y-3">
+                        <div class="bg-blue-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium">Inuit</span>
+                                <span class="text-2xl font-bold text-blue-600">57%</span>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium">Métis</span>
+                                <span class="text-2xl font-bold text-blue-600">52%</span>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium">First Nations</span>
+                                <span class="text-2xl font-bold text-blue-600">50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-gray-600 bg-gray-50 p-3 rounded mt-4">Approximately half reported satisfaction with healthcare wait times.</p>
+                </div>
+
+                <!-- Stat Card 5 -->
+                <div class="stat-card bg-white rounded-xl shadow-lg p-6" data-category="education">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">Language Preservation Efforts</h4>
+                    <p class="text-xs text-gray-500 mb-4">Source: Canadian Heritage, 2024</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                            <span class="text-3xl">📚</span>
+                            <p class="text-sm font-medium">85+ languages on FirstVoices platform</p>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                            <span class="text-3xl">💰</span>
+                            <p class="text-sm font-medium">$225M over 5 years (Budget 2024)</p>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                            <span class="text-3xl">🌐</span>
+                            <p class="text-sm font-medium">12 distinct language families</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stat Card 6 -->
+                <div class="stat-card bg-white rounded-xl shadow-lg p-6" data-category="demographics">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">Indigenous Population</h4>
+                    <p class="text-xs text-gray-500 mb-4">Source: Statistics Canada</p>
+                    
+                    <div class="text-center my-6">
+                        <div class="text-6xl font-bold text-indigenous-earth mb-4">4.5%</div>
+                        <p class="text-lg text-gray-700 mb-4">of Canada's total population</p>
+                        
+                        <div class="space-y-2 text-left">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="text-sm"><strong>First Nations:</strong> Largest group</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="text-sm"><strong>Métis:</strong> Second largest</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="text-sm"><strong>Inuit:</strong> Primarily in northern regions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="inline-block bg-gray-100 text-gray-700 text-sm font-semibold px-4 py-2 rounded-full mb-4">LEARN MORE</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-gray-900 mb-4">Resources & Further Reading</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Official sources and organizations for deeper understanding</p>
+            </div>
+
+            <!-- Resources Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                
+                <a href="https://www.statcan.gc.ca" target="_blank" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-indigenous-red hover:shadow-lg transition group">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-indigenous-red transition">Statistics Canada</h4>
+                    <p class="text-gray-600 text-sm mb-4">Official statistics on Indigenous health, demographics, and social indicators</p>
+                    <span class="text-indigenous-red font-medium text-sm">Visit Website →</span>
+                </a>
+
+                <a href="https://nctr.ca" target="_blank" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-indigenous-red hover:shadow-lg transition group">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-indigenous-red transition">National Centre for Truth and Reconciliation</h4>
+                    <p class="text-gray-600 text-sm mb-4">Permanent archive of residential school history and Survivor testimonies</p>
+                    <span class="text-indigenous-red font-medium text-sm">Visit Website →</span>
+                </a>
+
+                <a href="https://www.firstvoices.com" target="_blank" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-indigenous-red hover:shadow-lg transition group">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-indigenous-red transition">FirstVoices</h4>
+                    <p class="text-gray-600 text-sm mb-4">Free, open-source Indigenous language learning platform</p>
+                    <span class="text-indigenous-red font-medium text-sm">Visit Website →</span>
+                </a>
+
+                <a href="https://www.sac-isc.gc.ca" target="_blank" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-indigenous-red hover:shadow-lg transition group">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-indigenous-red transition">Indigenous Services Canada</h4>
+                    <p class="text-gray-600 text-sm mb-4">Health programs, child and family services, and community support</p>
+                    <span class="text-indigenous-red font-medium text-sm">Visit Website →</span>
+                </a>
+
+                <a href="https://commissionforindigenouslanguages.ca" target="_blank" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-indigenous-red hover:shadow-lg transition group">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-indigenous-red transition">Office of the Commissioner of Indigenous Languages</h4>
+                    <p class="text-gray-600 text-sm mb-4">Supporting language reclamation and revitalization efforts</p>
+                    <span class="text-indigenous-red font-medium text-sm">Visit Website →</span>
+                </a>
+
+                <a href="https://www.rcaanc-cirnac.gc.ca/eng/1524494530110/1557511412801" target="_blank" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-indigenous-red hover:shadow-lg transition group">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-indigenous-red transition">94 Calls to Action</h4>
+                    <p class="text-gray-600 text-sm mb-4">Complete list of TRC recommendations for reconciliation</p>
+                    <span class="text-indigenous-red font-medium text-sm">Read Full Report →</span>
+                </a>
+
+            </div>
+
+            <!-- Data Sources -->
+            <div class="bg-gray-50 rounded-2xl p-8">
+                <h4 class="text-xl font-bold text-gray-900 mb-6 text-center">Data Sources for This Website</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+                    <div class="flex items-start gap-2">
+                        <span class="text-indigenous-red">📊</span>
+                        <p class="text-sm text-gray-700">Statistics Canada - Health of Canadians Report (2024-2025)</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-indigenous-red">📊</span>
+                        <p class="text-sm text-gray-700">Statistics Canada - Indigenous Survey Series (2024)</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-indigenous-red">📊</span>
+                        <p class="text-sm text-gray-700">Indigenous Services Canada - Departmental Reports (2024-25)</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-indigenous-red">📊</span>
+                        <p class="text-sm text-gray-700">Canadian Heritage - Indigenous Languages Program</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-indigenous-red">📊</span>
+                        <p class="text-sm text-gray-700">Truth and Reconciliation Commission - Final Report (2015)</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-indigenous-red">📊</span>
+                        <p class="text-sm text-gray-700">Canadian Medical Association - Indigenous Health Reports (2024)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">About This Project</h4>
+                    <p class="text-sm">This website was created to educate teenagers and adults about Indigenous health, culture, history, and the ongoing journey toward reconciliation in Canada. All statistics are from official government and research sources.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Acknowledgment</h4>
+                    <p class="text-sm">We acknowledge that we are on the traditional territories of Indigenous peoples across Canada, including First Nations, Inuit, and Métis peoples, and we pay respect to their past, present, and future.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Important Dates</h4>
+                    <ul class="text-sm space-y-2">
+                        <li>June 21 - National Indigenous Peoples Day</li>
+                        <li>September 30 - National Day for Truth and Reconciliation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p class="mb-2">Created for educational purposes | Last updated: February 2026</p>
+                <p>All data sourced from official Canadian government statistics and research institutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script-tailwind.js"></script>
+</body>
+</html>
